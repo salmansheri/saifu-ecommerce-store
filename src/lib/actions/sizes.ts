@@ -1,6 +1,6 @@
 export async function getSizes() {
   const response = await fetch(
-    "http://localhost:3000/api/store/64fdca8555524d5815004cd4/sizes",
+    `${process.env.NEXT_PUBLIC_BACKEND_APPLICATION_URL}/sizes`,
     { cache: "no-cache" }
   );
 

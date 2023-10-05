@@ -1,6 +1,6 @@
 export async function getProducts() {
   const response = await fetch(
-    "http://localhost:3000/api/store/650058ac38e9a3075c8604e7/products",
+    `${process.env.NEXT_PUBLIC_BACKEND_APPLICATION_URL}/products`,
     { cache: "no-cache" }
   );
 
@@ -9,7 +9,7 @@ export async function getProducts() {
 
 export async function getProductById(id: string) {
   const response = await fetch(
-    `http://localhost:3000/api/store/650058ac38e9a3075c8604e7/products/${id}`,
+    `${process.env.NEXT_PUBLIC_BACKEND_APPLICATION_URL}/products/${id}`,
     { cache: "no-cache" }
   );
 
@@ -17,8 +17,10 @@ export async function getProductById(id: string) {
 }
 export async function getSearchProducts(query: string) {
   const response = await fetch(
-    `http://localhost:3000/api/search?query=${query}`,
-    { cache: "no-cache" }
+    `https://saifu-ecommerce-admin.vercel.app/api/search?query=${query}`,
+    {
+      cache: "no-cache",
+    }
   );
 
   return response.json();
