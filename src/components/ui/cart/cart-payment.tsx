@@ -26,19 +26,14 @@ const CartPayment: React.FC<CartPaymentProps> = ({ data }) => {
   }
 
   const onCheckout = async () => {
-    const response = await fetch(`${process.env.NEXT_PUBLIC_URL}/checkout`, {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify({
-        productIds: data.map((product) => product.id),
-      }),
-    });
+    const response = await axios.post(
+      `${process.env.NEXT_PUBLIC_URL}/checkout`,
+      {
+        productIds: data.map((item) => item.id),
+      }
+    );
 
-    const url = await response.json();
-
-    window.location = url.url;
+    window.location = response.data.url;
   };
   return (
     <div className="space-y-4">
