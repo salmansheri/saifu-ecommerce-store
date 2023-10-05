@@ -10,7 +10,7 @@ interface ProductPageProps {
 
 export default async function ProductPage({ params }: ProductPageProps) {
   const product = await getProductById(params.productId);
-  console.log(product);
+
   return (
     <section className="min-h-screen lg:px-40 md:px-32 px-10">
       <div className="py-6 lg:flex">
