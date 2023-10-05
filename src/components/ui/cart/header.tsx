@@ -10,7 +10,6 @@ interface CartHeaderProps {
 }
 
 const CartHeader: React.FC<CartHeaderProps> = ({ user }) => {
-  console.log(user);
   return (
     <header className="h-20 flex lg:px-40 md:px-28 px-10 items-center justify-between">
       <Image src="/images/logo/logo.svg" alt="logo" width={200} height={200} />

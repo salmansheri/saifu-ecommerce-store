@@ -36,7 +36,6 @@ const Products: React.FC<ProductsProps> = ({
   let filteredProducts = products.filter(
     (product) => product.gender.name === gender
   );
-  // console.log(filterProducts);
 
   return (
     <section className="products gap-4 grid grid-cols-1 lg:grid-cols-2 p-6">
