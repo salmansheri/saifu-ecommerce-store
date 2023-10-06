@@ -13,7 +13,7 @@ interface ThumbnailProps {
 const Thumbnail: React.FC<ThumbnailProps> = ({ src, href, label }) => {
   const router = useRouter();
   return (
-    <div className="flex flex-col">
+    <div className=" flex-col hidden lg:flex">
       <div
         onClick={() => router.push(href!)}
         className="relative  h-44 w-32 cursor-pointer"

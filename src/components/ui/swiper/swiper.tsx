@@ -1,22 +1,33 @@
 "use client";
 
-import React from "react";
+import React, { useEffect } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import Image from "next/image";
 import "swiper/css/navigation";
 import { Navigation, Autoplay } from "swiper/modules";
+import { useMediaQuery } from "react-responsive";
 
 interface CarousalProps extends React.HTMLAttributes<HTMLDivElement> {
-  images: string[];
+  images?: string[];
+  thumbnailImages?: { id: number; src: string; href: string; label: string }[];
 }
 
-const Carousal: React.FC<CarousalProps> = ({ images, className, ...props }) => {
+const Carousal: React.FC<CarousalProps> = ({
+  images,
+  className,
+  thumbnailImages,
+  ...props
+}) => {
+  const isMobile = useMediaQuery({ query: "(min-width: 700px)" });
+  useEffect(() => {
+    console.log(isMobile);
+  }, [isMobile]);
   return (
     <>
       <Swiper
         className={className}
-        slidesPerView={3}
+        slidesPerView={isMobile ? 3 : 1}
         spaceBetween={30}
         navigation={true}
         modules={[Autoplay, Navigation]}
@@ -25,7 +36,7 @@ const Carousal: React.FC<CarousalProps> = ({ images, className, ...props }) => {
           disableOnInteraction: false,
         }}
       >
-        {images.map((src) => (
+        {images?.map((src) => (
           <SwiperSlide key={src}>
             <Image
               src={src}

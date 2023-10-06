@@ -29,7 +29,7 @@ const Header = () => {
   return (
     <header className="sticky top-0 z-50 bg-white dark:bg-slate-800">
       {/* FIRST  */}
-      <div className="lg:px-40 md:px-32 px-10 h-10 font-light text-xs hidden lg:flex items-center w-full gap-x-5 pl-2">
+      <div className="lg:px-40 md:px-10 px-5 h-10 font-light text-xs hidden lg:flex items-center w-full gap-x-5 pl-2">
         <Link href="/">Offers</Link>
         <Link href="/">Fanbook</Link>
         <Link href="/" className="flex items-center gap-x-2">
@@ -39,7 +39,7 @@ const Header = () => {
         <Link href="/">TriBe Membership</Link>
       </div>
       {/* SECOND  */}
-      <div className="lg:px-36 md:px-32 px-10 flex h-16 shadow-md justify-between items-center">
+      <div className="lg:px-36 md:px-32 px-2 flex h-16 shadow-md justify-between items-center">
         <div className="flex gap-x-5 h-full items-center">
           <MobileNav />
           <Link href="/">

@@ -5,7 +5,7 @@ import React from "react";
 
 const Poster = () => {
   return (
-    <div>
+    <div className="mt-10">
       <h1 className="w-full text-center text-xl font-bold">
         Design of the Week
       </h1>
