@@ -21,36 +21,43 @@ export const categories = [
     id: 1,
     title: "Live Now",
     href: "/campaign/live-now",
+    src: "/images/1/1.png",
   },
   {
     id: 2,
     title: "Men",
     href: "/campaign/men-clothing",
+    src: "/images/1/2.png",
   },
   {
     id: 3,
     title: "Women",
     href: "/campaign/women-clothing",
+    src: "/images/1/3.png",
   },
   {
     id: 4,
     title: "Accessories",
     href: "/campaign/accessories",
+    src: "/images/1/4.png",
   },
   {
     id: 5,
     title: "Bewakoof Air",
     href: "/products/bewakoof-air",
+    src: "/images/1/5.png",
   },
   {
     id: 6,
     title: "Official Merch",
     href: "/campaign/official-collaberation",
+    src: "/images/1/6.png",
   },
   {
     id: 7,
     title: "Plus Size",
     href: "/campaign/plus-size-store",
+    src: "/images/1/7.png",
   },
 ];
 
