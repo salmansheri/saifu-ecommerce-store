@@ -10,6 +10,8 @@ import MainNav from "./navigation/main-nav";
 import MobileNav from "./navigation/mobile-nav";
 import { Separator } from "./separator";
 import { ModeToggle } from "./theme/mode-toggle";
+import { categories } from "@/lib/constants/data";
+import CategorySwiper from "./swiper/category-swiper";
 
 const Header = () => {
   const router = useRouter();
@@ -105,13 +107,16 @@ const Header = () => {
         </div>
       </div>
       {/* THIRD  */}
-      {/* <div className="hidden lg:px-40 md:px-32 px-10 h-20 lg:flex items-center justify-between text-xl">
+      <div className="hidden lg:px-40 md:px-32 px-10 h-20 lg:flex items-center justify-between text-xl">
         {categories.map((category) => (
           <Link href={category.href} key={category.id}>
             {category.title}
           </Link>
         ))}
-      </div> */}
+      </div>
+      <div className=" px-5 h-20 md:hidden flex items-center justify-between text-xl my-10">
+        <CategorySwiper />
+      </div>
     </header>
   );
 };

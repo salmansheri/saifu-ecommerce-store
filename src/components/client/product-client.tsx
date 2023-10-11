@@ -45,11 +45,11 @@ const ProductClient: React.FC<ProductClientProps> = ({
     }
   }, [params.productName]);
 
-  let filteredProducts = products.filter(
+  let filteredProducts = products?.filter(
     (product) => product.gender.name === gender
   );
 
-  const numberOfFilteredProducts = filteredProducts.length;
+  const numberOfFilteredProducts = filteredProducts?.length;
 
   if (numberOfFilteredProducts === 0) {
     return (

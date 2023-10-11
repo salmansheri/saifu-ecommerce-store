@@ -9,7 +9,7 @@ import { Navigation, Autoplay } from "swiper/modules";
 import { useMediaQuery } from "react-responsive";
 
 interface CarousalProps extends React.HTMLAttributes<HTMLDivElement> {
-  images?: string[];
+  images?: (string | undefined)[];
   thumbnailImages?: { id: number; src: string; href: string; label: string }[];
 }
 
@@ -39,7 +39,7 @@ const Carousal: React.FC<CarousalProps> = ({
         {images?.map((src) => (
           <SwiperSlide key={src}>
             <Image
-              src={src}
+              src={src as string}
               alt="images"
               fill
               className="object-cover object-center"
